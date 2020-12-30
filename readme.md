@@ -10,6 +10,6 @@ pip install pycturing
 
 ```python
 from pycturing.text import TextPycturing
-tp = TextPycturing()
+tp = TextPycturing(length=5)
 tp.save('a.png')
 ```

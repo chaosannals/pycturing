@@ -1,5 +1,6 @@
 import math
 from PIL import Image, ImageFont
+from ran import pkg
 from ..asset import unzip_font
 from .util import draw_char
 from ..util import roll_point, roll_text, roll_rgba, vague_float
@@ -17,12 +18,12 @@ class TextPycturing:
         self.length = kws.get('length', 6)
         self.font_size = kws.get('font_size', 28)
         self.font = ImageFont.truetype(
-            unzip_font('shs-cn-b.ttf'),
+            pkg.load('pycturing.asset.font', 'zip'),
             self.font_size
         )
         self.noise = TextNoise(
             font=ImageFont.truetype(
-                unzip_font('shs-cn-b.ttf'),
+                pkg.load('pycturing.asset.font', 'zip'),
                 math.ceil(self.font_size / 3)
             )
         )

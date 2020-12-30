@@ -1,17 +1,13 @@
 import setuptools
-from pycturing.asset import zip_font
+from ran import fs, pkg
 
-def load_content(path):
-    with open(path, 'r', encoding='utf8') as reader:
-        return reader.read()
-
-zip_font()
+pkg.save('pycturing/asset/font.py', zip='assets/shs-cn-b.ttf')
 
 setuptools.setup(
     name='pycturing',
-    version='0.0.1',
+    version='0.0.2',
     description='yet a captcha library',
-    long_description=load_content('readme.md'),
+    long_description=fs.load('readme.md'),
     long_description_content_type='text/markdown',
     url='https://github.com/chenshenchao/pycturing',
     keywords='pycturing captcha',
@@ -31,5 +27,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     install_requires=[
         'pillow>=8.0.1',
+        'ran>=0.0.5',
     ]
 )
