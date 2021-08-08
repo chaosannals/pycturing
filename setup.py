@@ -5,7 +5,7 @@ pkg.save('pycturing/asset/font.py', zip='assets/shs-cn-b.ttf')
 
 setuptools.setup(
     name='pycturing',
-    version='0.0.2',
+    version='0.0.3',
     description='yet a captcha library',
     long_description=fs.load('readme.md'),
     long_description_content_type='text/markdown',

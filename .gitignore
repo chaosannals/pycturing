@@ -2,5 +2,7 @@
 /build/
 /dist/
 /*.egg-info/
+/debug/
+/debug*.py
 __pycache__
 *.png
