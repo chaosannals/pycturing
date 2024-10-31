@@ -23,10 +23,14 @@ setuptools.setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
     ],
     packages=setuptools.find_packages(),
     install_requires=[
-        'pillow>=8.0.1',
-        'ran>=0.0.5',
+        'pillow==9.5.0',
+        'ran==0.0.5',
+        'torch==2.0.1',
+        'torchaudio==2.0.2',
+        'torchvision==0.15.2',
     ]
 )
